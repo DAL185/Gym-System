@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login_servlet</servlet-name>
+    <servlet-class>servlet.Login_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_Article_servlet</servlet-name>
+    <servlet-class>servlet.add_Article_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchArticle_servlet</servlet-name>
+    <servlet-class>servlet.SearchArticle_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>revise_Article_servlet</servlet-name>
+    <servlet-class>servlet.revise_Article_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delarticle</servlet-name>
+    <servlet-class>servlet.delarticle</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_Article_servlet</servlet-name>
+    <servlet-class>servlet.delete_Article_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_member_servlet</servlet-name>
+    <servlet-class>servlet.search_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_member_servlet</servlet-name>
+    <servlet-class>servlet.add_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_member_servlet</servlet-name>
+    <servlet-class>servlet.delete_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>edit_member_servlet</servlet-name>
+    <servlet-class>servlet.edit_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_course_servlet</servlet-name>
+    <servlet-class>servlet.add_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>edit_course_servlet</servlet-name>
+    <servlet-class>servlet.edit_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_course_servlet</servlet-name>
+    <servlet-class>servlet.search_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_course_servlet</servlet-name>
+    <servlet-class>servlet.delete_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>find_member_servlet</servlet-name>
+    <servlet-class>servlet.find_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>finded_member_servlet</servlet-name>
+    <servlet-class>servlet.finded_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_goods_servlet</servlet-name>
+    <servlet-class>servlet.add_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>find_course_servlet</servlet-name>
+    <servlet-class>servlet.find_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Register_servlet</servlet-name>
+    <servlet-class>servlet.Register_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>guest_Register_servlet</servlet-name>
+    <servlet-class>servlet.guest_Register_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>guest_Login_servlet</servlet-name>
+    <servlet-class>servlet.guest_Login_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>guest_search_member_servlet</servlet-name>
+    <servlet-class>servlet.guest_search_member_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_goods_servlet</servlet-name>
+    <servlet-class>servlet.search_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>order_course_servlet</servlet-name>
+    <servlet-class>servlet.order_course_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_mycourse_servlet</servlet-name>
+    <servlet-class>servlet.search_mycourse_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_mycourse_servlet</servlet-name>
+    <servlet-class>servlet.delete_mycourse_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>edit_goods_servlet</servlet-name>
+    <servlet-class>servlet.edit_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>guest_buy_goods_servlet</servlet-name>
+    <servlet-class>servlet.guest_buy_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>guest_pay_goods_servlet</servlet-name>
+    <servlet-class>servlet.guest_pay_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_mygoods_servlet</servlet-name>
+    <servlet-class>servlet.search_mygoods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_mygoods_servlet</servlet-name>
+    <servlet-class>servlet.delete_mygoods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_goods_servlet</servlet-name>
+    <servlet-class>servlet.delete_goods_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sendout_goods_servlet</servlet-name>
+    <servlet-class>servlet.sendout_goods_servlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Login_servlet</servlet-name>
+    <url-pattern>/servlet/Login_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_Article_servlet</servlet-name>
+    <url-pattern>/servlet/add_Article_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchArticle_servlet</servlet-name>
+    <url-pattern>/servlet/SearchArticle_servlet</url-pattern>
+  </servlet-mapping>	
+  <servlet-mapping>
+    <servlet-name>revise_Article_servlet</servlet-name>
+    <url-pattern>/servlet/revise_Article_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delarticle</servlet-name>
+    <url-pattern>/servlet/delarticle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_Article_servlet</servlet-name>
+    <url-pattern>/servlet/delete_Article_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_member_servlet</servlet-name>
+    <url-pattern>/servlet/search_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_member_servlet</servlet-name>
+    <url-pattern>/servlet/add_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_member_servlet</servlet-name>
+    <url-pattern>/servlet/delete_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>edit_member_servlet</servlet-name>
+    <url-pattern>/servlet/edit_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_course_servlet</servlet-name>
+    <url-pattern>/servlet/add_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>edit_course_servlet</servlet-name>
+    <url-pattern>/servlet/edit_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_course_servlet</servlet-name>
+    <url-pattern>/servlet/search_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_course_servlet</servlet-name>
+    <url-pattern>/servlet/delete_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>find_member_servlet</servlet-name>
+    <url-pattern>/servlet/find_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>finded_member_servlet</servlet-name>
+    <url-pattern>/servlet/finded_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_goods_servlet</servlet-name>
+    <url-pattern>/servlet/add_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>find_course_servlet</servlet-name>
+    <url-pattern>/servlet/find_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register_servlet</servlet-name>
+    <url-pattern>/servlet/Register_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>guest_Register_servlet</servlet-name>
+    <url-pattern>/servlet/guest_Register_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>guest_Login_servlet</servlet-name>
+    <url-pattern>/servlet/guest_Login_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>guest_search_member_servlet</servlet-name>
+    <url-pattern>/servlet/guest_search_member_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_goods_servlet</servlet-name>
+    <url-pattern>/servlet/search_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>order_course_servlet</servlet-name>
+    <url-pattern>/servlet/order_course_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_mycourse_servlet</servlet-name>
+    <url-pattern>/servlet/search_mycourse_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_mycourse_servlet</servlet-name>
+    <url-pattern>/servlet/delete_mycourse_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>edit_goods_servlet</servlet-name>
+    <url-pattern>/servlet/edit_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>guest_buy_goods_servlet</servlet-name>
+    <url-pattern>/servlet/guest_buy_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>guest_pay_goods_servlet</servlet-name>
+    <url-pattern>/servlet/guest_pay_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_mygoods_servlet</servlet-name>
+    <url-pattern>/servlet/search_mygoods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_mygoods_servlet</servlet-name>
+    <url-pattern>/servlet/delete_mygoods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_goods_servlet</servlet-name>
+    <url-pattern>/servlet/delete_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendout_goods_servlet</servlet-name>
+    <url-pattern>/servlet/sendout_goods_servlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

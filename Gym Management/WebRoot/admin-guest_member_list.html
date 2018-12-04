@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Amaze UI Admin table Examples</title>
+  <meta name="description" content="这是一个 table 页面">
+  <meta name="keywords" content="table">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body ng-controller="admin-guest_member_list">
+
+
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+    <strong>Amaze UI</strong> <small>Welcome to David Fitness Club</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li><a href="javascript:;"><span class="am-icon-envelope-o"></span>Mailbox<span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span>Manager <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="#"><span class="am-icon-user"></span>Information</a></li>
+          <li><a href="#"><span class="am-icon-cog"></span>Settings</a></li>
+          <li><a href="#"><span class="am-icon-power-off"></span>Log out</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">Open full screen</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li><a href="admin-index.html"><span class="am-icon-home"></span>First Page</a></li>
+        <li class="admin-parent">
+         
+          <ul class="am-list am-collapse admin-sidebar-sub am-in">
+            <li><a href="admin-guest_member_list.html" class="am-cf"><span class="am-icon-check"></span>Personal Information<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            
+            
+          </ul>
+        </li>
+        
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-file"></span>Course Management<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
+            <li><a href="admin-guest_course_list.html" class="am-cf"><span class="am-icon-check"></span>Course List<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="admin-guest_mycourse_list.html" class="am-cf"><span class="am-icon-puzzle-piece"></span>My Course</a></li>
+            
+          </ul>
+        </li>
+        
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-file"></span>Online Store<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
+            <li><a href="admin-guest_goods_list.html" class="am-cf"><span class="am-icon-check"></span>Goods List<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="admin-guest_goods_buy.html" class="am-cf"><span class="am-icon-puzzle-piece"></span>Check out</a></li>
+            <li><a href="admin-guest_mygoods.html" class="am-cf"><span class="am-icon-puzzle-piece"></span>My orders</a></li>
+            
+          </ul>
+        </li>
+        
+        <li><a href="admin-table.html"><span class="am-icon-table"></span>More pages</a></li>
+        <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span>Log off</a></li>
+        
+      </ul>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-bookmark"></span>Sharing</p>
+          <p>Smiling to everyday —— Amaze UI</p>
+        </div>
+      </div>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-tag"></span> Wiki</p>
+          <p>Welcome to the Amaze UI wiki!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+      <div class="am-cf am-padding am-padding-bottom-0">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Personal Information</strong> / <small>Table</small></div>
+      </div>
+
+      <hr>
+
+      <div class="am-g">
+        <div class="am-u-md-4 am-u-lg-4">
+          <div class="am-btn-toolbar">
+            
+          </div>
+        </div>
+        
+        <div class="am-u-md-4 am-u-lg-4" >
+        	
+  		</div>
+       
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+          <input type="hidden" class="am-input-sm" value="{{x.id}}" ng-model="formData.id" />
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Name
+              </div>
+              <div class="am-u-sm-8 am-u-md-4 am-u-lg-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.name">
+              </div>
+              <div class="am-hide-sm-only am-u-md-6"></div>
+            </div>
+
+            <div class="am-g am-margin-top">
+                <div class="am-u-sm-2 am-u-md-2 am-text-right">Gender</div>
+            	<div class="am-u-sm-4 am-u-md-4">
+              		<select data-am-selected="{btnSize: 'sm'}"  ng-model="formData.gender">
+                		<option value="Male">Male</option>
+                		<option value="Female">Female</option>
+              		</select>
+            	</div>
+            	<div class="am-hide-sm-only am-u-md-6"></div>
+          	</div>
+
+			<div class="am-g am-margin-top">
+                <div class="am-u-sm-2 am-u-md-2 am-text-right">Card Type</div>
+            	<div class="am-u-sm-4 am-u-md-4">
+              		<select data-am-selected="{btnSize: 'sm'}"  ng-model="formData.type">
+                		<option value="Month Card">Month Card</option>
+                		<option value="Season Card">Season Card</option>
+                		<option value="Half-year Card">Half-year Card</option>
+                		<option value="Year Card">Year Card</option>
+              		</select>
+            	</div>
+            	<div class="am-hide-sm-only am-u-md-6"></div>
+          	</div>
+          	
+          	<div class="am-g am-margin-top">
+            	<div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Expired Time
+              	</div>
+              	<div class="am-u-sm-8 am-u-md-4">
+                	<input type="text" class="am-input-sm"  ng-model="formData.duetime">
+              	</div>
+              	<div class="am-hide-sm-only am-u-md-6">Y/M/D</div>
+          	</div>
+
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Phone Number
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.phone">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6"></div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Height
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.height">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">CM</div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Weight
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"   ng-model="formData.weight">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">KG</div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Girth
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.surround">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">CM</div>
+            
+            </div><div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Fat rate
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.fatrate">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">%</div>
+            </div>
+            
+            
+			<div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	Heart rate
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  ng-model="formData.heartrate">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">reps/min</div>
+            </div>
+            
+             <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-12 am-u-md-2 am-text-right admin-form-text">
+              		Advice
+              </div>
+              <div class="am-u-sm-12 am-u-md-10">
+                <textarea rows="10"  ng-model="formData.advice"></textarea>
+              </div>
+            </div>
+
+            <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-12 am-u-md-2 am-text-right admin-form-text">
+                	Remark
+              </div>
+              <div class="am-u-sm-12 am-u-md-10">
+                <textarea rows="10" ng-model="formData.remark"></textarea>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="admin-content-footer">
+      <hr>
+      <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+    </footer>
+
+  </div>
+  <!-- content end -->
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/angular.js"></script>
+<script src="js/admin-guest_member_list.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

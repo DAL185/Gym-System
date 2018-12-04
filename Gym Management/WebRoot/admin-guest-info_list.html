@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Amaze UI Admin table Examples</title>
+  <meta name="description" content="这是一个 table 页面">
+  <meta name="keywords" content="table">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body ng-controller="admin-guest-info_list">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+    <strong>Amaze UI</strong> <small>欢迎来到大卫健身会所</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+          <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+          <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li><a href="admin-index.html"><span class="am-icon-home"></span>管理首页</a></li>
+        <li class="admin-parent">
+         
+          <ul class="am-list am-collapse admin-sidebar-sub am-in">
+            <li><a href="admin-guest-info_list.html" class="am-cf"><span class="am-icon-check"></span>个人信息<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            
+            
+          </ul>
+        </li>
+        
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-file"></span>课程管理<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
+            <li><a href="admin-guest-course_list.html" class="am-cf"><span class="am-icon-check"></span>课程列表<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="admin-guest-mycourse_list.html" class="am-cf"><span class="am-icon-puzzle-piece"></span>我的课程</a></li>
+            
+          </ul>
+        </li>
+        
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-file"></span>在线商城<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
+            <li><a href="admin-guest-goods_list.html" class="am-cf"><span class="am-icon-check"></span>商品选购<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="admin-guest-mygoods_list.html" class="am-cf"><span class="am-icon-puzzle-piece"></span>我的订单</a></li>
+            
+          </ul>
+        </li>
+        
+        <li><a href="admin-table.html"><span class="am-icon-table"></span>更多页面</a></li>
+        <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span>注销</a></li>
+        
+      </ul>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-bookmark"></span>心得</p>
+          <p>时光静好，与君语；细水流年，与君同。—— Amaze UI</p>
+        </div>
+      </div>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-tag"></span> wiki</p>
+          <p>Welcome to the Amaze UI wiki!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+      <div class="am-cf am-padding am-padding-bottom-0">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">个人信息</strong> / <small>Table</small></div>
+      </div>
+
+      <hr>
+
+      <div class="am-g">
+        <div class="am-u-md-4 am-u-lg-4">
+          <div class="am-btn-toolbar">
+            
+          </div>
+        </div>
+        
+        <div class="am-u-md-4 am-u-lg-4" >
+        	
+  		</div>
+       
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+          <input type="hidden" class="am-input-sm" value="{{x.id}}" ng-model="formData.id" />
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	姓名
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.name}}" ng-model="formData.name">
+              </div>
+              <div class="am-hide-sm-only am-u-md-6">请如实填写会员姓名</div>
+            </div>
+
+            <div class="am-g am-margin-top">
+                <div class="am-u-sm-4 am-u-md-2 am-text-right">性别</div>
+            	<div class="am-u-sm-8 am-u-md-10">
+              		<select data-am-selected="{btnSize: 'sm'}" value="{{x.gender}}" ng-model="formData.gender">
+                		<option value="男">男</option>
+                		<option value="女">女</option>
+              		</select>
+            	</div>
+          	</div>
+
+			<div class="am-g am-margin-top">
+                <div class="am-u-sm-4 am-u-md-2 am-text-right">健身卡类型</div>
+            	<div class="am-u-sm-8 am-u-md-10">
+              		<select data-am-selected="{btnSize: 'sm'}" value="{{x.type}}" ng-model="formData.type">
+                		<option value="月卡">月卡</option>
+                		<option value="季卡">季卡</option>
+                		<option value="半年卡">半年卡</option>
+                		<option value="年卡">年卡</option>
+              		</select>
+            	</div>
+          	</div>
+          	
+          	<div class="am-g am-margin-top">
+            	<div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	健身卡到期时间
+              	</div>
+              	<div class="am-u-sm-8 am-u-md-4">
+                	<input type="text" class="am-input-sm" value="{{x.duetime}}" ng-model="formData.duetime">
+              	</div>
+              	<div class="am-hide-sm-only am-u-md-6">年/月/日</div>
+          	</div>
+
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	联系方式
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.phone}}" ng-model="formData.phone">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">请仔细填写手机号或其他联系方式</div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	身高
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.height}}" ng-model="formData.height">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">CM</div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	体重
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm"  value="{{x.weight}}" ng-model="formData.weight">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">KG</div>
+            </div>
+            
+            <div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	围度
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.surround}}" ng-model="formData.surround">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">臂围/胸围/腰围/腿围   单位：CM</div>
+            
+            </div><div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	体脂率
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.fatrate}}" ng-model="formData.fatrate">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">%</div>
+            </div>
+            
+            
+			<div class="am-g am-margin-top">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                	心率
+              </div>
+              <div class="am-u-sm-8 am-u-md-4">
+                <input type="text" class="am-input-sm" value="{{x.heartrate}}" ng-model="formData.heartrate">
+              </div>
+              <div class="am-u-sm-12 am-u-md-6">次/分钟</div>
+            </div>
+            
+             <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-12 am-u-md-2 am-text-right admin-form-text">
+              		饮食及健身建议
+              </div>
+              <div class="am-u-sm-12 am-u-md-10">
+                <textarea rows="10" value="{{x.advice}}" ng-model="formData.advice"></textarea>
+              </div>
+            </div>
+
+            <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-12 am-u-md-2 am-text-right admin-form-text">
+                	备注
+              </div>
+              <div class="am-u-sm-12 am-u-md-10">
+                <textarea rows="10" value="{{x.remark}}" ng-model="formData.remark"></textarea>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="admin-content-footer">
+      <hr>
+      <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+    </footer>
+
+  </div>
+  <!-- content end -->
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/angular.js"></script>
+<script src="js/admin-member_list.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

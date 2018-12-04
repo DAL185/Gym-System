@@ -1,0 +1,57 @@
+<html ng-app="myApp">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>This is login page</title>
+<link rel="stylesheet" type="text/css" href="assets/css/amazeui.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/amazeui.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+</head>
+<body style="background-color: lightblue;">
+	<div class="am-g" ng-controller="guest_Register_ctrl">
+		<div class="am-u-lg-4">&nbsp;</div>
+		<div class="am-u-lg-4" style="margin-top: 160px;">
+			<form class="am-form">
+				<div style="text-align: center;font-size: 48px;color: #3C3C3C;">
+					<b>Sigh Up</b>
+				</div>
+				<br>
+				<div class="am-form-group">
+					<input type="text" class="am-form-field am-round"
+						placeholder="Phone number" ng-model="guest_phone" required />
+				</div>
+				<br>
+
+				<div class="am-form-group">
+					<input type="password" class="am-form-field am-round"
+						placeholder="Password " ng-model="guest_pwd" required />
+				</div>
+				<br>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					<button type="submit"
+						class="am-btn am-btn-primary am-round am-btn-block"
+						ng-click="submit()">Submit
+					</button>
+				</div>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					
+				</div>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					<button type="reset"
+						class="am-btn am-btn-danger am-btn-reset am-round am-btn-block"
+						ng-click="Reset()">Reset
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="am-u-lg-4">&nbsp;</div>
+	</div>
+</body>
+<script src="assets/js/angular.js"></script>
+<script src="js/guest_Register_ctrl.js"></script>
+
+</html>

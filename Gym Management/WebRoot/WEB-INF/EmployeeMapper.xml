@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nebula.crm.mapper.EmployeeMapper">
+	
+	<!-- 保存员工 -->
+	<insert id="save" parameterType="Employee" useGeneratedKeys="true"
+		keyProperty="id" keyColumn="id">
+		insert into
+		t_employee(username,realName,password,tel,email,dept_id,inputTime,state)
+		values(#{username},#{realName},#{password},#{tel},#{email},#{dept.id},#{inputTime},#{state})
+	</insert>
+	<!-- 修改员工 -->
+	<update id="update" parameterType="Employee">
+		update t_employee set
+		username=#{username},realName=#{realName},password=#{password},tel=#{tel},
+		email=#{email},dept_id=#{dept.id},inputTime=#{inputTime},state=#{state}
+		where id=#{id}
+	</update>
+	
+	<!-- 员工的离职：void leave(Long id);-->
+	 <update id="leave" parameterType="long">
+	   update t_employee set state = -1 where id = #{id}
+	 </update>
+	
+	<!-- 删除 -->
+ 	<delete id="delete" parameterType="long">
+ 		delete from t_employee where id=#{id}
+ 	</delete>
+
+	 
+	<select id="getOne" parameterType="long" resultType="Employee">
+		select * from
+		t_employee where id = #{id}
+	</select>
+	<!-- 登录用的 -->
+	<select id="getOneByName" parameterType="String" resultType="Employee">
+		select * from
+		t_employee where username=#{name}
+	</select>
+	
+	<!-- 获取所有员工 -->
+	<select id="getAll" resultType="Employee">
+		select *
+		 from t_employee
+	</select>
+	
+	
+	<!-- 	int total = baseMapper.loadDataTotal(query);
+	
+			pageList.setRows(baseMapper.loadDataRows(query));
+	查询有多少条 -->
+	
+	<select id="loadDataTotal" resultType="int">
+		select count(*) from t_employee e
+		<include refid="whereSql"/>
+	</select>
+
+	<!-- 查询数据 -->
+	<!-- $会出现sql注入  '%#{q}%'会出错   只是个字符
+		concat拼接
+	 -->
+	<select id="loadDataRows" resultMap="employeeMap" parameterType="EmployeeQuery">
+		SELECT
+			e.id,
+			e.username,
+			e.`password`,
+			e.realName,
+			e.tel,
+			e.email,
+			e.inputTime,
+			e.state,
+			d.id did,
+			d.`name` dname,
+			r.id rid,
+			r.name rname
+		FROM
+			t_employee e
+		LEFT JOIN t_employee_role er ON er.employee_id = e.id
+		LEFT JOIN t_role r ON r.id = er.role_id
+		LEFT JOIN t_department d ON d.id = e.dept_id
+		<include refid="whereSql"/>		
+		LIMIT #{start},#{rows}
+	</select>
+	
+	<sql id="whereSql">
+	<!-- 拼接时判断，q有值才增加条件 -->
+		<where>
+		  <if test="q!=null and q!=''">
+			and (username like concat("%",#{q},"%") 
+			or realname like concat("%",#{q},"%")
+			or email like concat("%",#{q},"%"))
+		  </if>
+		  <!-- state的条件:
+	      	不等于-2，才做条件查询
+	     	-->
+		    <if test="state != -2">
+		      and  e.state = #{state}
+		    </if>
+		    
+		   <!--  private String beginDate;//录入开始时间
+				 private String endDate;//录入结束时间 -->
+			<if test="beginDate !=null and beginDate !=''">
+				and e.inputTime >= #{beginDate}
+			</if> 
+			<if test="endDate !=null and endDate !=''">
+				and e.inputTime &lt; #{endDate}
+			</if> 
+		    
+		</where>
+	</sql>
+	<resultMap type="Employee" id="employeeMap">
+		<id column="id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="password" property="password"/>
+		<result column="realName" property="realName"/>
+		<result column="tel" property="tel"/>
+		<result column="email" property="email"/>
+		<result column="inputTime" property="inputTime"/>
+		<result column="state" property="state"/>
+		<!-- private Department dept; -->
+		<association property="dept" javaType="Department">
+			<id column="did" property="id"/>
+		<result column="dname" property="name"/>
+		</association>
+		<association property="role" javaType="Role">
+			<id column="rid" property="id"/>
+			<result column="rname" property="name"/>
+		</association>
+	</resultMap>
+	
+	<insert id="saveRP" parameterType="map" useGeneratedKeys="true" keyProperty="id">
+		insert into t_employee_role
+		(employee_id,role_id) VALUES
+		(#{empID},#{roleID})
+	</insert>
+
+
+</mapper> 

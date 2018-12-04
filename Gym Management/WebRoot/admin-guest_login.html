@@ -1,0 +1,64 @@
+<html ng-app="myApp">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>This is login page</title>
+<link rel="stylesheet" type="text/css" href="assets/css/amazeui.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/amazeui.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+</head>
+<body style="background-color: lightblue;">
+	
+	<div class="am-g" ng-controller="guest_Login_ctrl">
+		<div class="am-u-lg-4">&nbsp;</div>
+		<div class="am-u-lg-4" style="margin-top: 160px;">
+			<form class="am-form">
+				<div style="text-align: center;font-size: 48px;color: #3C3C3C;">
+					<b>Log in</b>
+				</div>
+				<br>
+				<div class="am-form-group">
+					<input type="text" class="am-form-field am-round"
+						placeholder="Please input your phone number" ng-model="guest_phone" required />
+				</div>
+				<br>
+
+				<div class="am-form-group">
+					<input type="password" class="am-form-field am-round"
+						placeholder="Please input your password" ng-model="guest_pwd" required />
+				</div>
+				<br>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					<button type="button"
+						class="am-btn am-btn-primary am-round am-btn-block"
+						ng-click="guest_doLogin()">Login
+					</button>
+				</div>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					
+				</div>
+				
+				<div class="am-u-lg-4 am-ug-md-4">
+					<button type="button"
+						class="am-btn am-btn-success am-round am-btn-block"
+						ng-click="guest_doRegister()">Sign up
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="am-u-lg-4">&nbsp;</div>
+	</div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/angular.js"></script>
+<script src="js/guest_Login_ctrl.js"></script>
+
+
+
+</html>
