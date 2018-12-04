@@ -29,10 +29,6 @@ Tools you need to install:
 
 ![image](https://github.com/DAL185/Gym-System/blob/master/Gym%20Management/screeenshot-Learning/addmember.PNG)
 
-* Also,in page of reminder list, you can click "Add new reminder" to release new reminder for a patient
-
-![image](https://github.com/DAL185/david_reminder/blob/master/reminder/Screenshot-Reminder/addreminder.PNG)
-
 #### Course management
 
 * Like member management,you can add courses on this system
